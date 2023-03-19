@@ -18,6 +18,17 @@
 		<spring-cloud-azure.version>4.6.0</spring-cloud-azure.version>
 	</properties>
 	<dependencies>
+
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>com.azure.spring</groupId>
 			<artifactId>spring-cloud-azure-starter</artifactId>
@@ -30,11 +41,73 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>com.azure.spring</groupId>
 			<artifactId>spring-cloud-azure-starter-data-cosmos</artifactId>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>com.microsoft.azure</groupId>-->
+<!--			<artifactId>spring-data-cosmosdb</artifactId>-->
+<!--			<version>2.3.0</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-sdk-bom</artifactId>
+			<version>1.1.1</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>com.azure</groupId>-->
+<!--			<artifactId>azure-ai-formrecognizer</artifactId>-->
+<!--			<version>3.1.8</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-ai-formrecognizer</artifactId>
+			<version>4.0.4</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+
+
+
 	</dependencies>
+
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -44,6 +117,16 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+
+<!--			<dependency>-->
+<!--				<groupId>com.azure</groupId>-->
+<!--				<artifactId>azure-sdk-bom</artifactId>-->
+<!--				<version>4.0.4</version>-->
+<!--				<type>pom</type>-->
+<!--				<scope>import</scope>-->
+<!--			</dependency>-->
+
+
 		</dependencies>
 	</dependencyManagement>
 
