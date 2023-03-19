@@ -1,12 +1,14 @@
 package com.cobraTeam.intelligentFormsApp.repository;
 
-import com.azure.spring.data.cosmos.repository.ReactiveCosmosRepository;
-import com.cobraTeam.intelligentFormsApp.User;
-import org.springframework.stereotype.Repository;
-import reactor.core.publisher.Flux;
+import com.azure.spring.data.cosmos.repository.CosmosRepository;
+import com.azure.spring.data.cosmos.repository.Query;
+import com.cobraTeam.intelligentFormsApp.entity.User;
 
-@Repository
-public interface UserRepository extends ReactiveCosmosRepository<User, String> {
-    Flux<User> findByFirstName(String firstName);
+import java.util.List;
+import java.util.Optional;
 
+public interface UserRepository extends CosmosRepository<User, String> {
+
+    @Query(value = "SELECT * FROM u")
+    List<User> getAllUsers();
 }
